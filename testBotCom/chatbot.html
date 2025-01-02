@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="tbclogo.png" alt="Dashboard Logo">
+        </div>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="chatbot.html" class="active">Chatbot</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="compiler.html">Compiler</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <div class="content chatbot">
+        <h1>Chatbot</h1>
+        <div class="chatbox">
+            <div class="message bot">Hello! How can I assist you today?</div>
+            <!-- Messages will be appended here -->
+        </div>
+
+        <div class="input-container">
+            <input class="input" type="text" placeholder="Type your message...">
+            <div class="send-btn">Send</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

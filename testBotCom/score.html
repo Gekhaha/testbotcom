@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Score</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        #score {
+            font-size: 30px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        #back-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        #back-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thank you for taking the quiz!</h1>
+    <p>Your score is:</p>
+    <div id="score"></div>
+    <button id="back-button" onclick="window.location.href='quizzes.html'">Go Back to Quiz</button>
+
+    <script>
+        // Assuming the score is stored in localStorage (you can modify to use sessionStorage or other methods)
+        const score = localStorage.getItem('score');
+        document.getElementById('score').textContent = `${score}/12`;
+    </script>
+</body>
+</html>

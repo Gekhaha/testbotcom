@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Background */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+        }
+
+        .sidebar {
+    width: 250px;
+    background-color: #34495E;
+    color: #ECF0F1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    text-align: center;
+    z-index: 10;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    max-width: 150px;
+    max-height: 100px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: inherit;
+    padding: 15px 10px;
+    border-radius: 5px;
+    display: block;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: #1ABC9C;
+}
+
+.sidebar .active {
+    background-color: #1ABC9C;
+}
+        /* Content Area Styles */
+        .content {
+            margin-left: 270px;
+            padding: 40px;
+            width: calc(100% - 270px);
+        }
+
+        .about {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+
+        .about h1 {
+            font-size: 2.5rem;
+            color: #1d3557;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .about p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .about ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about ul li {
+            margin: 15px 0;
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .about ul li strong {
+            color: #1d3557;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+            }
+
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="tbclogo.png" alt="Dashboard Logo">
+        </div>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="chatbot.html">Chatbot</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="quizzes.html">Quizzes</a>
+        <a href="compiler.html">Compiler</a>
+        <a href="about.html" class="active">About</a>
+    </div>
+    <div class="content about">
+        <h1>About Us</h1>
+        <p>Our platform is dedicated to helping hardworking learners who seek guidance and support along their educational journey. With the right tools and resources, we help you grow at your own pace and reach your fullest potential.</p>
+        <ul>
+            <li><strong>Our Mission:</strong> Empowering learners with accessible tools and guidance to foster growth and success.</li>
+            <li><strong>Our Approach:</strong> Offering step-by-step learning paths, interactive resources, and a supportive community to ensure no one gets left behind.</li>
+            <li><strong>Why We Do It:</strong> Because we believe that with the right resources and encouragement, anyone can achieve their goals, no matter where they start.</li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

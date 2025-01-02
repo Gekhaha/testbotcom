@@ -1,0 +1,408 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #2C3E50;
+    color: #ECF0F1;
+    display: flex;
+    height: 100vh;
+    flex-direction: row;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #34495E;
+    color: #ECF0F1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    text-align: center;
+    z-index: 10;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    max-width: 150px;
+    max-height: 100px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: inherit;
+    padding: 15px 10px;
+    border-radius: 5px;
+    display: block;
+    margin: 5px 0;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.sidebar a:hover {
+    background-color: #1ABC9C;
+}
+
+.sidebar .active {
+    background-color: #1ABC9C;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34495E;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #ECF0F1;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #1ABC9C;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: block;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+/* Container with flexbox layout */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Content Styles */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 250px;
+    background-color: #2C3E50;
+    overflow-y: auto;
+    box-sizing: border-box;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+    z-index: 5;
+    overflow-x: hidden;
+    width: calc(100% - 250px);
+}
+
+/* Dashboard Styles */
+.dashboard {
+    background-color: #34495E;
+    color: #ECF0F1;
+}
+
+.dashboard h1 {
+    font-size: 2.5em;
+    color: #E74C3C;
+}
+
+.dashboard p {
+    font-size: 1.1em;
+    color: #BDC3C7;
+}
+
+.dashboard-overview {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+    justify-items: center;
+}
+
+.dashboard-card {
+    background-color: #1C2833;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    color: #ECF0F1;
+    text-align: center;
+}
+
+.dashboard-card h3 {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+    color: #1ABC9C;
+}
+
+.dashboard-card p {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+.dashboard-card .btn {
+    display: inline-block;
+    background-color: #1ABC9C;
+    color: #ECF0F1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-card .btn:hover {
+    background-color: #16A085;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    background-color: #1ABC9C;
+    color: #1C2833;
+}
+
+.dashboard-card:hover .btn {
+    background-color: #34495E;
+}
+
+/* Chatbot Styles */
+.chatbot {
+    background-color: #34495E;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    max-height: calc(100vh - 160px);
+}
+
+.message {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    max-width: 75%;
+}
+
+.user {
+    background-color: #1ABC9C;
+    color: white;
+    align-self: flex-end;
+}
+
+.bot {
+    background-color: #1C2833;
+    color: white;
+    align-self: flex-start;
+}
+
+.input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 80%;
+    margin-bottom: 10px;
+    font-size: 1em;
+    background-color: #ecf0f1;
+}
+
+.send-btn {
+    padding: 10px 20px;
+    background-color: #1ABC9C;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+    background-color: #16A085;
+}
+
+.chatbot .input,
+.chatbot .send-btn {
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+/* Roadmap Container */
+.roadmap-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin: 30px 20px;
+}
+
+/* Roadmap Box Styles */
+.roadmap-box {
+    width: 22.3%;
+    padding: 20px;
+    background-color: #1C2833;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    color: #ECF0F1;
+    text-align: left;
+    position: relative;
+    margin: 0 20px 20px 0;
+}
+
+/* Remove hover effect */
+.roadmap-box:hover {
+    transform: none;
+    box-shadow: none;
+    background-color: #1C2833;
+    color: #ECF0F1;
+}
+
+/* Roadmap Box Heading */
+.roadmap-box h2 {
+    font-size: 2em;
+    color: #1ABC9C;
+    margin-bottom: 15px;
+}
+
+/* Roadmap Box Content */
+.roadmap-box p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+/* Custom Buttons for Roadmap Box */
+.roadmap-box .btn {
+    display: inline-block;
+    background-color: #1ABC9C;
+    color: #ECF0F1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.roadmap-box .btn:hover {
+    background-color: #16A085;
+}
+
+/* Form Styling */
+#quizForm {
+    background-color: #e4f3e6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Question Styling */
+.question {
+    margin-bottom: 20px;
+}
+
+.question p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Label and Input Alignment */
+.question label {
+    display: block;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 8px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.question input[type="radio"] {
+    margin-right: 10px;
+}
+
+/* Submit Button Styling */
+.submit-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+}
+
+/* Back Button Styling */
+.back-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.back-container button {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-container button:hover {
+    background-color: #5a6268;
+}
+
